@@ -1,0 +1,19 @@
+Create Virtual environment using Virtualenv env_name
+Activate the env using source env_name/Scripts/activate
+Install django using pip install django
+Create the project using django-admin startproject project_name
+Test running the server: python manage.py runserver
+Create the apps: python manage.py startapp app_name
+Add the app_name to INSTALLED_APPS in Settings.py file
+Migrate the database: python manage.py migrate
+create super user: python manage.py createsuperuser
+vandana@work.comHaWorking123#
+python manage.py makemigrations app_name
+python manage.py migrate
+testuser2TU$er234#
+Error:
+AssertionError: `basename` argument not specified, and could not automatically de
+termine the name from the viewset, as it does not have a `.queryset` attribute.
+Action:
+Add basename in the router explicitly if queryset is not used
+router.register(r'books', views.BookViewSet, basename='BookCatalogue')
