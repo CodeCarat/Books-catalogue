@@ -17,7 +17,7 @@ class BookSerializer(serializers.ModelSerializer):
     def validate(self, data):
         isbn_no = data['isbn']
         print(isbn_no)
-        parms = {"q":isbn_no+'isbn', 'key':settings.API_KEY}
+        parms = {"q":'isbn'+ isbn_no, 'key':settings.API_KEY}
         res = requests.get(url="https://www.googleapis.com/books/v1/volumes", params=parms)
         print(res.url)
         print(res.ok)
