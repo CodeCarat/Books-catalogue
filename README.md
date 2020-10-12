@@ -11,6 +11,7 @@ Steps to use the code:
 4. Install the dependencies: pip install -r requirements.txt
 5. This project uses postgres, download and install postgres from https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
 6. Setup PostgreSQL 
+7. Get Google Books API Key and update in localsettings.py to validate ISBN.
 7. Apply the migrations: Python manage.py migrate
 8. Run the server: python manage.py runserver
 ------------------------------------------------
