@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+from .local_settings import *
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -21,12 +21,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'ho_@xnx7kb=%+wbn9slls!=78sfa)*fhi4#z%madh)jy7mans8'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -50,9 +44,9 @@ INSTALLED_APPS = [
     'bookapi',
 ]
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-SITE_ID = 1
+#SITE_ID = 1
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -97,19 +91,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'bookscatalogue.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'book_db',
-        'USER': 'book_admin',
-        'PASSWORD': 'book123#',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
 
 AUTH_USER_MODEL = 'customerapi.CustomerProfile'
 
@@ -150,5 +131,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# Key to request book details using Google Book API
-API_KEY = "AIzaSyAKcB2CNJ62-JBBmC1fE9l8U0iinmANkwU"
