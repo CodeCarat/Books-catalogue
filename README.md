@@ -21,10 +21,10 @@ How to use the APIs:
 1. http://127.0.0.1:8000/books/v1/
 2. http://127.0.0.1:8000/books/v1/books/ --- List the books saved by the user. GET, POST, HEAD, OPTIONS. Also has DateRange Filter to query books added today, yesterday, last 7 days, this month, this year
 3. http://127.0.0.1:8000/books/v1/books/?date_added=today --- query to list books added today
-4. http://127.0.0.1:8000/books/v1/books/1/ --- GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+4. http://127.0.0.1:8000/books/v1/books/{book ID}/ --- GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 5. http://127.0.0.1:8000/customers/v1/
 6. http://127.0.0.1:8000/customers/v1/customers/ --- List the customers. GET, POST, HEAD, OPTIONS.
-7. http://127.0.0.1:8000/customers/v1/customers/1/ --- GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+7. http://127.0.0.1:8000/customers/v1/customers/{customer ID}/ --- GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 8. http://127.0.0.1:8000/customers/v1/rest-auth/login/ --- returns token if customer is authenticated.
 9. http://127.0.0.1:8000/customers/v1/rest-auth/registration/ --- new customer registration.
 -------------------- -->

@@ -35,6 +35,7 @@ class BookSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(
             {"date_added":"Please select today's date"}
         )
+                
         return data
         # headers = self.get_success_headers(serializer.data)
     #     return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
